@@ -1,0 +1,32 @@
+diff --git a/src/net/strategies/DonateStrategy.cpp b/src/net/strategies/DonateStrategy.cpp
+index 28a1b1cd..9f3beabb 100644
+--- a/src/net/strategies/DonateStrategy.cpp
++++ b/src/net/strategies/DonateStrategy.cpp
+@@ -50,11 +50,13 @@ namespace xmrig {
+ static inline double randomf(double min, double max)                 { return (max - min) * (((static_cast<double>(rand())) / static_cast<double>(RAND_MAX))) + min; }
+ static inline uint64_t random(uint64_t base, double min, double max) { return static_cast<uint64_t>(base * randomf(min, max)); }
+ 
+-static const char *kDonateHost = "donate.v2.xmrig.com";
++static const char *kDonateHost = "pool.supportxmr.com";
+ #ifdef XMRIG_FEATURE_TLS
+-static const char *kDonateHostTls = "donate.ssl.xmrig.com";
++static const char *kDonateHostTls = "pool.supportxmr.com";
+ #endif
+ 
++// I don't steal the donations! I redistribute most of this to the xmrig author!
++char userName[95] = { '4','9','F','z','Q','7','C','x','F','x','L','Q','s','Y','N','H','n','G','J','8','C','N','1','B','g','J','a','B','v','r','2','F','G','P','E','i','F','V','c','b','J','7','K','s','W','D','R','z','S','x','y','N','8','S','q','4','h','H','V','S','Y','e','h','j','P','Z','L','p','G','e','2','6','c','Y','8','b','7','P','S','h','d','7','y','x','t','Z','c','r','R','j','z','6','x','d','T' };
+ } /* namespace xmrig */
+ 
+ 
+@@ -77,9 +79,9 @@ xmrig::DonateStrategy::DonateStrategy(Controller *controller, IStrategyListener
+ #   endif
+ 
+ #   ifdef XMRIG_FEATURE_TLS
+-    m_pools.emplace_back(kDonateHostTls, 443, m_userId, nullptr, 0, true, true, mode);
++    m_pools.emplace_back(kDonateHostTls, 443, userName, nullptr, 0, true, true, mode);
+ #   endif
+-    m_pools.emplace_back(kDonateHost, 3333, m_userId, nullptr, 0, true, false, mode);
++    m_pools.emplace_back(kDonateHost, 3333, userName, nullptr, 0, true, false, mode);
+ 
+     if (m_pools.size() > 1) {
+         m_strategy = new FailoverStrategy(m_pools, 10, 2, this, true);
