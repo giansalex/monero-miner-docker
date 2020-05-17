@@ -3,7 +3,6 @@ FROM alpine:3.11 AS builder
 ARG XMRIG_VERSION='v5.11.1'
 WORKDIR /miner
 
-
 RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
     apk update && apk add --no-cache \
     build-base \
@@ -26,6 +25,8 @@ FROM alpine:3.11
 LABEL owner="Giancarlos Salas"
 LABEL maintainer="giansalex@gmail.com"
 
+ENV WALLET=49FzQ7CxFxLQsYNHnGJ8CN1BgJaBvr2FGPEiFVcbJ7KsWDRzSxyN8Sq4hHVSYehjPZLpGe26cY8b7PShd7yxtZcrRjz6xdT
+
 RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
     apk update && apk add --no-cache \
     libuv \
@@ -36,4 +37,4 @@ WORKDIR /xmr
 COPY --from=builder /miner/xmrig/build/xmrig /xmr
 
 ENTRYPOINT ["./xmrig"]
-CMD ["--url=pool.supportxmr.com:5555", "--user=8BszDYwfJGYTR9Fr8dS9Cq6c9bXm8N5y49SXNFUfMRkSeiAUgYtcHhFNztqHV9HKRnZViiFb9EUHuDZMfbZVFQhiKbGKvTs", "--pass=Docker", "-k", "--coin=monero"]˚
+CMD ["--url=pool.supportxmr.com:5555", "--donate-level=1", "--user=$WALLET", "--pass=docker", "-k", "--coin=monero"]˚
