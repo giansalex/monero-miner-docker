@@ -13,17 +13,22 @@ For easy start, with default configurations.
 docker run -d --restart=always giansalex/monero-miner
 ```
 
-If you have already create your wallet:
+Use your own configuration:
 
 ```sh
-docker run -d -e WALLET=xxxxxxxxxxx giansalex/monero-miner
+docker run -d -e WALLET="{YOUR_WALLET_ID}" giansalex/monero-miner
 ```
+
+|Environment       |     Description      |
+|------------------|----------------------|
+|WALLET            | Wallet Address       |
+|POOL              | URL of mining server |
 
 **Advanced**
 
 You can customize [xmrig options](https://github.com/xmrig/xmrig#command-line-options)
 ```sh
-docker run -d giansalex/monero-miner \
+docker run -d giansalex/monero-miner xmrig\
      -o pool.supportxmr.com:3333 \
      -u <YOUR_WALLET> \
      -k  \
