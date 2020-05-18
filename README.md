@@ -8,13 +8,17 @@ Image of latest [xmrig](https://github.com/xmrig/xmrig) version, built on Alpine
 
 ## Run
 
-For easy start, with default configurations.
+For easy start, with default configuration.
 
 ```sh
 docker run -d --restart=always giansalex/monero-miner
 ```
 
-Use your own configuration:
+Use your own configuration.
+
+- Create your [wallet](https://mymonero.com/)
+- Choose a [pool](http://moneropools.com/) (default: `supportXMR`)
+- Run container
 
 ```sh
 docker run -d -e WALLET="{YOUR_WALLET_ID}" giansalex/monero-miner
@@ -27,7 +31,7 @@ docker run -d -e WALLET="{YOUR_WALLET_ID}" giansalex/monero-miner
 
 **Advanced**
 
-You can customize [xmrig options](https://github.com/xmrig/xmrig#command-line-options)
+You can customize [xmrig options](https://github.com/xmrig/xmrig#command-line-options).
 ```sh
 docker run -d giansalex/monero-miner xmrig\
      -o pool.supportxmr.com:3333 \
