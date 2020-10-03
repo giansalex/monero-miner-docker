@@ -10,7 +10,7 @@ RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/ap
     cmake \
     libuv-dev \
     libressl-dev \ 
-    hwloc-dev@testing~1.11.13
+    hwloc-dev@testing~2.2.0
 
 RUN git clone https://github.com/xmrig/xmrig && \
     mkdir xmrig/build && \
