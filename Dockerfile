@@ -32,7 +32,7 @@ RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/ap
     apk update && apk add --no-cache \
     libuv \
     libressl \ 
-    hwloc@testing~1.11.13
+    hwloc@testing~2.2.0
 
 WORKDIR /xmr
 COPY --from=builder /miner/xmrig/build/xmrig /xmr
