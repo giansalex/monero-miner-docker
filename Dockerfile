@@ -1,6 +1,6 @@
 FROM alpine:3.11 AS builder
 
-ARG XMRIG_VERSION='v6.5.1'
+ARG XMRIG_VERSION='v6.5.2'
 WORKDIR /miner
 
 RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
