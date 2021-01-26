@@ -1,6 +1,6 @@
-FROM alpine:3.11 AS builder
+FROM alpine:3.13 AS builder
 
-ARG XMRIG_VERSION='v6.7.2'
+ARG XMRIG_VERSION='v6.8.0'
 WORKDIR /miner
 
 RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
@@ -21,7 +21,7 @@ RUN cd xmrig/build && \
     make -j$(nproc)
 
 
-FROM alpine:3.11
+FROM alpine:3.13
 LABEL owner="Giancarlos Salas"
 LABEL maintainer="giansalex@gmail.com"
 
