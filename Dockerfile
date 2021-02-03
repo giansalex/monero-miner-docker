@@ -3,14 +3,14 @@ FROM alpine:3.13 AS builder
 ARG XMRIG_VERSION='v6.8.1'
 WORKDIR /miner
 
-RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk update && apk add --no-cache \
     build-base \
     git \
     cmake \
     libuv-dev \
     libressl-dev \ 
-    hwloc-dev@testing~2.2.0
+    hwloc-dev@community
 
 RUN git clone https://github.com/xmrig/xmrig && \
     mkdir xmrig/build && \
@@ -28,11 +28,11 @@ LABEL maintainer="giansalex@gmail.com"
 ENV WALLET=49FzQ7CxFxLQsYNHnGJ8CN1BgJaBvr2FGPEiFVcbJ7KsWDRzSxyN8Sq4hHVSYehjPZLpGe26cY8b7PShd7yxtZcrRjz6xdT
 ENV POOL=pool.supportxmr.com:5555
 
-RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk update && apk add --no-cache \
     libuv \
     libressl \ 
-    hwloc@testing~2.2.0
+    hwloc@community
 
 WORKDIR /xmr
 COPY --from=builder /miner/xmrig/build/xmrig /xmr
