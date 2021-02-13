@@ -1,6 +1,6 @@
 ![Monero Logo](https://web.getmonero.org/img/monero-logo.png)
 
-# Monero Miner with Docker
+# Monero Miner with Docker Alpine
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/giansalex/monero-miner.svg?style=flat-square)](https://hub.docker.com/r/giansalex/monero-miner/) [![](https://images.microbadger.com/badges/image/giansalex/monero-miner.svg)](https://microbadger.com/images/giansalex/monero-miner "Get your own image badge on microbadger.com")
 
 Image of latest [xmrig](https://github.com/xmrig/xmrig) version, built on Alpine.
