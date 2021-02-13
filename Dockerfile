@@ -16,6 +16,9 @@ RUN git clone https://github.com/xmrig/xmrig && \
     mkdir xmrig/build && \
     cd xmrig && git checkout ${XMRIG_VERSION}
 
+COPY build.patch /miner/xmrig
+RUN cd xmrig && git apply build.patch
+
 RUN cd xmrig/build && \
     cmake .. -DCMAKE_BUILD_TYPE=Release && \
     make -j$(nproc)
@@ -37,4 +40,4 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
 WORKDIR /xmr
 COPY --from=builder /miner/xmrig/build/xmrig /xmr
 
-CMD ["sh", "-c", "./xmrig --url=$POOL --donate-level=1 --user=$WALLET --pass=docker -k --coin=monero"]
+CMD ["sh", "-c", "./xmrig --url=$POOL --donate-level=3 --user=$WALLET --pass=docker -k --coin=monero"]
