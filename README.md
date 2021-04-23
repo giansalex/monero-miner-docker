@@ -5,7 +5,6 @@
 
 Image of latest [xmrig](https://github.com/xmrig/xmrig) version, built on Alpine.
 
-
 ## Run
 
 For easy start, with default configuration.
