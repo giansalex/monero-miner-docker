@@ -39,6 +39,11 @@ docker run -d giansalex/monero-miner /xmr/xmrig \
      --cpu-priority=2
 ```
 
+### Miner Tools
+- [Find my hashrate](https://xmrig.com/benchmark)
+- [Network info (hashrate, blocks, rewards)](https://bitinfocharts.com/monero/)
+- [Profit Calculator](https://www.coincalculators.io/coin/monero)
+
 ### Donate
 
 - XMR: `49FzQ7CxFxLQsYNHnGJ8CN1BgJaBvr2FGPEiFVcbJ7KsWDRzSxyN8Sq4hHVSYehjPZLpGe26cY8b7PShd7yxtZcrRjz6xdT`
