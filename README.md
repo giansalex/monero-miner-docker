@@ -42,5 +42,3 @@ docker run -d giansalex/monero-miner /xmr/xmrig \
 ### Donate
 
 - XMR: `49FzQ7CxFxLQsYNHnGJ8CN1BgJaBvr2FGPEiFVcbJ7KsWDRzSxyN8Sq4hHVSYehjPZLpGe26cY8b7PShd7yxtZcrRjz6xdT`
-- BTC: `bc1qduptk4pne2qnjemk075ay47rq6glwyp52gu473`
-- ETH: `0xdFF11Ac79830AC5089Dbf12fb3aB93D632314E15` (or ERC-20)
