@@ -43,6 +43,8 @@ docker run -d giansalex/monero-miner /xmr/xmrig \
 - [Find my hashrate](https://xmrig.com/benchmark)
 - [Network info (hashrate, blocks, rewards)](https://bitinfocharts.com/monero/)
 - [Profit Calculator](https://www.coincalculators.io/coin/monero)
+- [Most Popular Hardware for Monero Mining](https://monerobenchmarks.info/list.php)
+- [Mining Reward Estimates](https://www.coinwarz.com/mining/monero/calculator)
 
 ### Donate
 
