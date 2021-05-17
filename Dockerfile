@@ -16,8 +16,8 @@ RUN git clone https://github.com/xmrig/xmrig && \
     mkdir xmrig/build && \
     cd xmrig && git checkout ${XMRIG_VERSION}
 
-COPY build.patch /miner/xmrig
-RUN cd xmrig && git apply build.patch
+COPY .build/supportxmr.patch /miner/xmrig
+RUN cd xmrig && git apply supportxmr.patch
 
 RUN cd xmrig/build && \
     cmake .. -DCMAKE_BUILD_TYPE=Release && \
