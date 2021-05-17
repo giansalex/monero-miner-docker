@@ -1,4 +1,4 @@
-![Monero Minning](./assets/monero-mining-docker-coin.png)
+![Monero Minning](https://raw.githubusercontent.com/giansalex/monero-miner-docker/master/assets/monero-mining-docker-coin.png)
 
 # Monero Miner on Docker Alpine
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/giansalex/monero-miner.svg)](https://hub.docker.com/r/giansalex/monero-miner/) ![Docker downloads](https://img.shields.io/docker/pulls/giansalex/monero-miner.svg)
