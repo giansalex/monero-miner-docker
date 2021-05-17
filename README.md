@@ -1,7 +1,7 @@
 ![Monero Minning](https://raw.githubusercontent.com/giansalex/monero-miner-docker/master/assets/monero-mining-docker-coin.png)
 
 # Monero Miner on Docker Alpine
-[![Docker Build Status](https://img.shields.io/docker/cloud/build/giansalex/monero-miner.svg)](https://hub.docker.com/r/giansalex/monero-miner/) ![Docker downloads](https://img.shields.io/docker/pulls/giansalex/monero-miner.svg)
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/giansalex/monero-miner.svg)](https://hub.docker.com/r/giansalex/monero-miner/) ![Docker downloads](https://img.shields.io/docker/pulls/giansalex/monero-miner.svg?label=docker%20downloads) ![Image size](https://img.shields.io/docker/image-size/giansalex/monero-miner)
 
 Image of latest [XMRig](https://github.com/xmrig/xmrig) version, built on Alpine.
 
