@@ -3,7 +3,7 @@
 # Monero Miner on Docker Alpine
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/giansalex/monero-miner.svg)](https://hub.docker.com/r/giansalex/monero-miner/) ![Docker downloads](https://img.shields.io/docker/pulls/giansalex/monero-miner.svg)
 
-Image of latest [xmrig](https://github.com/xmrig/xmrig) version, built on Alpine.
+Image of latest [XMRig](https://github.com/xmrig/xmrig) version, built on Alpine.
 
 ## Run
 
@@ -42,8 +42,10 @@ docker run -d giansalex/monero-miner /xmr/xmrig \
 ### Miner Tools
 - [Find my hashrate](https://xmrig.com/benchmark)
 - [Network info (hashrate, blocks, rewards)](https://bitinfocharts.com/monero/)
-- [Profit Calculator](https://www.coincalculators.io/coin/monero)
 - [Most Popular Hardware for Monero Mining](https://monerobenchmarks.info/list.php)
+- [Optimize CPU minning performance](https://www.nicehash.com/blog/post/how-to-optimize-cpu-mining-performance-for-monero-random-x)
+- [XMRig configuration wizard](https://xmrig.com/wizard)
+- [Profit Calculator](https://www.coincalculators.io/coin/monero)
 - [Mining Reward Estimates](https://www.coinwarz.com/mining/monero/calculator)
 - [Compare CPU hardware hashrate](https://monerobenchmarks.info/cpuVScpu.php)
 
