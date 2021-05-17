@@ -45,6 +45,7 @@ docker run -d giansalex/monero-miner /xmr/xmrig \
 - [Profit Calculator](https://www.coincalculators.io/coin/monero)
 - [Most Popular Hardware for Monero Mining](https://monerobenchmarks.info/list.php)
 - [Mining Reward Estimates](https://www.coinwarz.com/mining/monero/calculator)
+- [Compare CPU hardware hashrate](https://monerobenchmarks.info/cpuVScpu.php)
 
 ### Donate
 
