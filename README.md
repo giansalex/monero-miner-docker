@@ -27,6 +27,7 @@ docker run -d -e WALLET="{YOUR_WALLET_ID}" giansalex/monero-miner
 |------------------|----------------------|
 |WALLET            | Wallet Address       |
 |POOL              | URL of mining server |
+|WORKER_NAME       | Worker name          |
 
 **Advanced**
 
