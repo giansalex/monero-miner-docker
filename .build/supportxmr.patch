@@ -1,5 +1,5 @@
 diff --git a/src/net/strategies/DonateStrategy.cpp b/src/net/strategies/DonateStrategy.cpp
-index 28a1b1cd..9f3beabb 100644
+index b288046e..ecdea57e 100644
 --- a/src/net/strategies/DonateStrategy.cpp
 +++ b/src/net/strategies/DonateStrategy.cpp
 @@ -50,11 +50,13 @@ namespace xmrig {
@@ -22,11 +22,11 @@ index 28a1b1cd..9f3beabb 100644
  #   endif
  
  #   ifdef XMRIG_FEATURE_TLS
--    m_pools.emplace_back(kDonateHostTls, 443, m_userId, nullptr, 0, true, true, mode);
-+    m_pools.emplace_back(kDonateHostTls, 443, userName, nullptr, 0, true, true, mode);
+-    m_pools.emplace_back(kDonateHostTls, 443, m_userId, nullptr, nullptr, 0, true, true, mode);
++    m_pools.emplace_back(kDonateHostTls, 443, userName, nullptr, nullptr, 0, true, true, mode);
  #   endif
--    m_pools.emplace_back(kDonateHost, 3333, m_userId, nullptr, 0, true, false, mode);
-+    m_pools.emplace_back(kDonateHost, 3333, userName, nullptr, 0, true, false, mode);
+-    m_pools.emplace_back(kDonateHost, 3333, m_userId, nullptr, nullptr, 0, true, false, mode);
++    m_pools.emplace_back(kDonateHost, 3333, userName, nullptr, nullptr, 0, true, false, mode);
  
      if (m_pools.size() > 1) {
          m_strategy = new FailoverStrategy(m_pools, 10, 2, this, true);
