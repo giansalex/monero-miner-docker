@@ -9,7 +9,8 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
     git \
     cmake \
     libuv-dev \
-    libressl-dev \ 
+    linux-headers \
+    libressl-dev \
     hwloc-dev@community
 
 RUN git clone https://github.com/xmrig/xmrig && \
@@ -35,7 +36,7 @@ ENV WORKER_NAME=docker
 RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk update && apk add --no-cache \
     libuv \
-    libressl \ 
+    libressl \
     hwloc@community
 
 WORKDIR /xmr
