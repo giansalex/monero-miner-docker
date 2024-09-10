@@ -3,7 +3,7 @@ FROM alpine:3.13 AS builder
 ARG XMRIG_VERSION='v6.21.1'
 WORKDIR /miner
 
-RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/v3.18/community" >> /etc/apk/repositories && \
     apk update && apk add --no-cache \
     build-base \
     git \
@@ -33,7 +33,7 @@ ENV WALLET=49FzQ7CxFxLQsYNHnGJ8CN1BgJaBvr2FGPEiFVcbJ7KsWDRzSxyN8Sq4hHVSYehjPZLpG
 ENV POOL=pool.supportxmr.com:5555
 ENV WORKER_NAME=docker
 
-RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/v3.18/community" >> /etc/apk/repositories && \
     apk update && apk add --no-cache \
     libuv \
     libressl \

