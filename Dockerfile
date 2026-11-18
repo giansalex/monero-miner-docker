@@ -1,17 +1,16 @@
-FROM alpine:3.13 AS builder
+FROM alpine:3.24 AS builder
 
-ARG XMRIG_VERSION='v6.22.2'
+ARG XMRIG_VERSION='v6.26.0'
 WORKDIR /miner
 
-RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/v3.18/community" >> /etc/apk/repositories && \
-    apk update && apk add --no-cache \
+RUN apk add --no-cache \
     build-base \
     git \
     cmake \
     libuv-dev \
     linux-headers \
-    libressl-dev \
-    hwloc-dev@community
+    openssl-dev \
+    hwloc-dev
 
 RUN git clone https://github.com/xmrig/xmrig && \
     mkdir xmrig/build && \
@@ -25,7 +24,7 @@ RUN cd xmrig/build && \
     make -j$(nproc)
 
 
-FROM alpine:3.13
+FROM alpine:3.24
 LABEL owner="Giancarlos Salas"
 LABEL maintainer="me@giansalex.dev"
 
@@ -33,11 +32,10 @@ ENV WALLET=49FzQ7CxFxLQsYNHnGJ8CN1BgJaBvr2FGPEiFVcbJ7KsWDRzSxyN8Sq4hHVSYehjPZLpG
 ENV POOL=pool.supportxmr.com:5555
 ENV WORKER_NAME=docker
 
-RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/v3.18/community" >> /etc/apk/repositories && \
-    apk update && apk add --no-cache \
+RUN apk add --no-cache \
     libuv \
-    libressl \
-    hwloc@community
+    openssl \
+    hwloc
 
 WORKDIR /xmr
 COPY --from=builder /miner/xmrig/build/xmrig /xmr
